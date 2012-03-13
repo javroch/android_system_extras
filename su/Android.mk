@@ -1,5 +1,5 @@
-ifeq ($(filter true,$(TARGET_BUILD_ORIGINAL_SU)),)
-# if TARGET_BUILD_ORIGINAL_SU is true or empty
+ifneq ($(TARGET_BUILD_ORIGINAL_SU),false)
+# if TARGET_BUILD_ORIGINAL_SU isn't specifically false
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
